@@ -22,7 +22,8 @@ I think the service could be used as a branding expense to get good press and mo
 
 ## Demos
 
-The code is currently hosted on Firebase as a demo at 
+The code is currently hosted on Firebase as a demo at:
+   https://esrr-aoc.firebaseapp.com/#/home 
 
 And the APK is available on GitHub here:
   https://github.com/mkobar/essr-aoc/releases/tag/0.0.1
