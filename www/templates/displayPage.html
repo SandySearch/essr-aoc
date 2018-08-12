@@ -1,0 +1,50 @@
+<ion-view title="Display Page" id="page3">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="displayPage-list2">
+            <ion-item ng-repeat="x in itemsUnique" style="padding-left: 0px" class="item-thumbnail-left" id="displayPage-list-item7">
+                <div class="row">
+                    <div class="col col-50"><p style="float: left"><strong>Title:</strong></p></div>
+                    <div class="col col-50">
+                    <p>{{x.title}}<p>
+                    </div>
+                </div>
+ 
+                <div class="row">
+                    <div class="col col-50"><p style="float: left"><strong>Start Date:</strong></p></div>
+                    <div class="col col-50">
+                    <p>{{x.sDate}}<p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-50"><p style="float: left"><strong>End Date:</strong></p></div>
+                    <div class="col col-50">
+                    <p>{{x.eDate}}<p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50"><p style="float: left"><strong>Location:</strong></p></div>
+                    <div class="col col-50">
+                    <p>{{x.location}}<p>
+                    </div>
+                </div>
+                
+                 <div class="row">
+                    <div class="col col-50"><p style="float: left"><strong>Description:</strong></p></div>
+                    <div class="col col-50">
+                    <p style="text-overflow:clip !important;">{{x.message}}<p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-50"><p style="float: left"><strong>All Day:</strong></p></div>
+                    <div class="col col-50">
+                    <p>{{x.allday}}<p>
+                    </div>
+                </div>
+            </ion-item>
+
+        </ion-list>
+        <a ng-click="backtoHome()" id="displayPage-button6" class="button button-dark button-block">Back to Home</a>
+    </ion-content>
+</ion-view>

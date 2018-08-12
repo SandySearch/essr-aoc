@@ -1,0 +1,22 @@
+<ion-view title="Test Cal Plugin" cache-view="false" hide-nav-bar="true" hide-back-button="true" id="page1">
+  <ion-content padding="true" class="has-header">
+    <div class="spacer" style="width: 300px; height: 46px;"></div>
+    <header id="header">
+    <div class="container">  <!-- holder -->
+	<div class="logo2">
+		<a href="#">
+                        <img src="img/1.png" width="80%" alt="essr">
+		</a><br/>
+		<a href="#">
+                        <img src="img/2.png" width="80%" alt="essr">
+		</a><br/>
+		<span style="text-align: center; padding-left: 40px;">Version: {{version}}</span>
+	</div>
+    </div>
+    </header>
+
+    <a ng-click="startReading()" id="button4" class="button button-dark button-block">Search for Services</a>
+    <a ui-sref="report()" id="button5" class="button button-dark button-block">Report Available Services</a>
+    <a ui-sref="login()" id="button3" class="button button-dark button-block">Login</a>
+  </ion-content>
+</ion-view>

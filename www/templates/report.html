@@ -1,0 +1,23 @@
+<ion-view title="SetPage" id="page4">
+  <ion-content padding="true" class="has-header">
+    <form id="set-form1" class="list">
+      <label class="item item-input" id="set-input2">
+        <span class="input-label">title</span>
+        <input ng-model="$parent.eventTitle" type="text" placeholder="Event title">
+      </label>
+      <label class="item item-input" id="set-input3">
+        <span class="input-label">message</span>
+        <input ng-model="$parent.eventMessage" type="text" placeholder="Event message">
+      </label>
+      <label class="item item-input" id="set-input4">
+        <span class="input-label">date</span>
+        <input type="date" ng-model="$parent.eventDate" placeholder="Event Date">
+      </label>
+      <label class="item item-input" id="set-input4">
+        <span class="input-label">time</span>
+        <input type="time" ng-model="$parent.eventTime" placeholder="Event Time">
+      </label>
+    </form>
+    <a ng-click="submitEvent()" id="set-button5" class="button button-dark button-block">Save</a>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-view title="Settings" id="page2">
+  <ion-content padding="true" class="has-header">
+    <form id="form1" class="list">
+      <label class="item item-input" id="input2">
+        <span class="input-label">Email</span>
+        <input ng-model="$parent.stringOne" type="text" placeholder="email address">
+      </label>
+      <label class="item item-input" id="input3">
+        <span class="input-label">Password</span>
+        <input ng-model="$parent.stringTwo" type="password" placeholder="password">
+      </label>
+    </form>
+    <a ng-click="login()" id="button5" class="button button-dark button-block">Login</a>
+    <a href="#" id="button6" class="button button-dark button-block">or Signup</a>
+  </ion-content>
+</ion-view>
