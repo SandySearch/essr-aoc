@@ -1,0 +1,26 @@
+<ion-view title="Services" cache-view="false" hide-nav-bar="true" hide-back-button="true" id="page1">
+  <ion-content padding="true" class="has-header">
+    <div class="spacer" style="width: 300px; height: 46px;"></div>
+    <header id="header">
+    <div class="container">  <!-- holder -->
+	<div class="logo2">
+		<a href="#">
+                        <img src="img/1.png" width="80%" alt="essr">
+		</a><br/>
+		<a href="#">
+                        <img src="img/2.png" width="80%" alt="essr">
+		</a><br/>
+		<span style="text-align: center; padding-left: 40px;">Version: {{version}}</span>
+	</div>
+    </div>
+    </header>
+
+    <h2>Search For: </h2>
+    <a ui-sref="login()" id="button3" class="button button-assertive button-block">Emergency shelters near you</a>
+    <a ui-sref="login()" id="button3" class="button button-assertive button-block">Emergency food and water near you</a>
+    <a ng-click="startReading()" id="button4" class="button button-positive button-block">Gas Stations with gas and power</a>
+    <a ui-sref="report()" id="button5" class="button button-positive button-block">Charging locations</a>
+    <a ui-sref="login()" id="button3" class="button button-positive button-block">Working ATMs</a>
+    <a ui-sref="goSearch()" id="button3" class="button button-positive button-block">Other</a>
+  </ion-content>
+</ion-view>
