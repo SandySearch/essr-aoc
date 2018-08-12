@@ -105,7 +105,7 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
     };
     $scope.items = [];
     $scope.itemsUnique = [];
-    $scope.itemsAll = [];
+    //$scope.itemsAll = [];
 
 
     //var obj = this.list;
@@ -123,10 +123,9 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
     $scope.submitEvent = function(){
         var eDate = new Date();
 
-
             alert("Success2: " + JSON.stringify(obj));
 
-            alert(obj); 
+            //alert(obj); 
             //alert(obj.length); 
             //alert(obj[0].name);
 
@@ -143,7 +142,7 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
                 temp.reporter = obj[i].reporter;
 		temp.uuid = $scope.deviceUUID;
 
-                $scope.itemsAll.push(temp);
+                $rootScope.itemsAll.push(temp);
 
                 $scope.items.push(temp);
             }
@@ -151,7 +150,7 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
             //$scope.itemsUnique = removeDuplicates($scope.items, "id");
             //saveAllDatatoFire();
 
-	    saveDatatoFire();
+	    //saveDatatoFire();
 
 	    /***
             setTimeout(function(){
@@ -194,7 +193,7 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
 
                     if(!$scope.itemsUnique[i].name){
                         $scope.itemsUnique[i].name ='';
-                    }saveDatatoFire
+                    }
 
                     if(!$scope.itemsUnique[i].eDate){
                         $scope.itemsUnique[i].eDate = '';
@@ -367,11 +366,6 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
     '$scope', '$stateParams','$state','$ionicLoading', 
     function ($scope, $stateParams,$state,$ionicLoading) {
 
-	$scope.eventTitle="";
-        $scope.eventMessage="";
-        $scope.eventDate="";
-        $scope.eventTime="";
-
     $scope.submitEvent = function(){
         var success = function(message){ 
             //alert("Success: " + JSON.stringify(message));
@@ -425,15 +419,52 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
 
   // show service list
     .controller('servicelistCtrl', [
-    '$scope', '$stateParams','$state','$ionicLoading', 
-    function ($scope, $stateParams,$state,$ionicLoading) {
+    '$scope', '$rootScope', '$stateParams','$state','$ionicLoading', 
+    function ($scope, $rootScope, $stateParams,$state,$ionicLoading) {
 
 	$scope.eventTitle="";
         $scope.eventMessage="";
         $scope.eventDate="";
         $scope.eventTime="";
 
-        $scope.list = function(){
+    $scope.list_esny = function(){
+		$rootScope.title = 'Emergency shelters near you';
+            $state.go('list');
+     }
+
+    $scope.list_efu = function(){
+		$rootScope.title = 'Emergency Food and Water near you';
+            $state.go('list');
+     }
+
+    $scope.list_gs = function(){
+		$rootScope.title = 'Open Gas Stations with fuel';
+            $state.go('list');
+     }
+
+    $scope.list_cs = function(){
+		$rootScope.title = 'Charging Stations';
+            $state.go('list');
+     }
+
+    $scope.list_ofs = function(){
+		$rootScope.title = 'Open Food Stores';
+            $state.go('list');
+     }
+
+    $scope.list_watm = function(){
+		$rootScope.title = 'Working ATMs';
+            $state.go('list');
+     }
+
+        $scope.getList = function(){
+            if ($stateParams.type != null) {
+		    var type = $stateParams.type;
+	    } else {
+		    var type = 'other';
+	    }
+
+	    alert("type =",type);
 
             //$state.go('displayPage');
             $state.go('list');
@@ -451,69 +482,20 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
 
   // show list
     .controller('listCtrl', [
-    '$scope', '$stateParams','$state','$ionicLoading', 
-    function ($scope, $stateParams,$state,$ionicLoading) {
+    '$scope', '$rootScope','$stateParams','$state','$ionicLoading', 
+    function ($scope, $rootScope, $stateParams,$state,$ionicLoading) {
 
-	$scope.eventTitle="";
-        $scope.eventMessage="";
-        $scope.eventDate="";
-        $scope.eventTime="";
+	if ($rootScope.type != null) {
+	    $scope.type = $rootScope.type;
+	}
 
-    $scope.submitEvent = function(){
-        var success = function(message){ 
-            //alert("Success: " + JSON.stringify(message));
+        $scope.gotoUrl = function(){
+            cordova.InAppBrowser.open(sponsorUrl, '_system', 'location=yes');
+            return false
+	}
 
-            //alert(message.length);    
-            //alert(message[0].title);
-
-            for(var i =0; i < message.length; i++){
-                    
-		var temp = {};
-                temp.id = message[i].id;
-                temp.title = message[i].title;
-                temp.sDate = message[i].startDate;
-                temp.eDate = message[i].endDate;
-                temp.message = message[i].message;
-                temp.location = message[i].location;
-                temp.allday = message[i].allday;
-            }
-
-            setTimeout(function(){
-                if(isEmpty($scope.itemsUnique)){
-                    //alert("No Event Found");
-                }
-            }, 500);
-
-        };
-        var error = function(message) { 
-            alert("Error: " + message); 
-        };
-
-        //var sDate = new Date();
-	var sDate = $scope.eventDate;
-	var sDate2 = new Date(sDate.getTime() + Date.parse($scope.eventTime));
-	//alert("eventTime: " +  $scope.eventTime);
-	//alert("eventTime: " +  Date.parse($scope.eventTime));
-	var sDate3 = new Date(sDate2.getTime() - (5*60*60*1000)); // -5 hours
-        //sDate.setFullYear(sDate.getFullYear() - 5);  // start date is now - 5 years
-        //var eDate = new Date();
-        //eDate.setFullDay(sDate.getFullDay() + 1);  // start date is now - 5 years
-	var eDate = new Date(sDate3.getTime() + 60*60*1000);  // add an hour
-	
-//	if (window.cordova && window.cordova.plugins) {
-	// window.plugins.calendar.createEvent(title,eventLocation,notes,startDate,endDate,success,error);
-        window.plugins.calendar.createEvent($scope.eventTitle,"",$scope.eventMessage,sDate3,eDate,success,error);
-//	}
-        $state.go('home');
-
-    }
         $scope.backtoHome = function(){
             $state.go('home');
-        }
-
-
-        function isEmpty(str) {
-            return (!str || 0 === str.length);
         }
 
     }])

@@ -39,7 +39,7 @@ angular.module('app.routes', [])
   })
 
   .state('list', {
-    url: '/list',
+	  url: '/list',
     templateUrl: 'templates/list.html',
     controller: 'listCtrl'
   })
