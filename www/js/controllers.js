@@ -444,6 +444,12 @@ angular.module('app.controllers', [])
         $scope.eventDate="";
         $scope.eventTime="";
 
+        $scope.list = function(){
+
+            //$state.go('displayPage');
+            $state.go('list');
+        }
+
     $scope.submitEvent = function(){
         var success = function(message){ 
             //alert("Success: " + JSON.stringify(message));
@@ -494,6 +500,76 @@ angular.module('app.controllers', [])
     }
         $scope.backtoHome = function(){
             $state.go('testCalPlugin');
+        }
+
+
+        function isEmpty(str) {
+            return (!str || 0 === str.length);
+        }
+
+    }])
+
+
+  // show list
+    .controller('listCtrl', [
+    '$scope', '$stateParams','$state','$ionicLoading', 
+    function ($scope, $stateParams,$state,$ionicLoading) {
+
+	$scope.eventTitle="";
+        $scope.eventMessage="";
+        $scope.eventDate="";
+        $scope.eventTime="";
+
+    $scope.submitEvent = function(){
+        var success = function(message){ 
+            //alert("Success: " + JSON.stringify(message));
+
+            //alert(message.length);    
+            //alert(message[0].title);
+
+            for(var i =0; i < message.length; i++){
+                    
+		var temp = {};
+                temp.id = message[i].id;
+                temp.title = message[i].title;
+                temp.sDate = message[i].startDate;
+                temp.eDate = message[i].endDate;
+                temp.message = message[i].message;
+                temp.location = message[i].location;
+                temp.allday = message[i].allday;
+            }
+
+            setTimeout(function(){
+                if(isEmpty($scope.itemsUnique)){
+                    //alert("No Event Found");
+                }
+            }, 500);
+
+        };
+        var error = function(message) { 
+            alert("Error: " + message); 
+        };
+
+        //var sDate = new Date();
+	var sDate = $scope.eventDate;
+	var sDate2 = new Date(sDate.getTime() + Date.parse($scope.eventTime));
+	//alert("eventTime: " +  $scope.eventTime);
+	//alert("eventTime: " +  Date.parse($scope.eventTime));
+	var sDate3 = new Date(sDate2.getTime() - (5*60*60*1000)); // -5 hours
+        //sDate.setFullYear(sDate.getFullYear() - 5);  // start date is now - 5 years
+        //var eDate = new Date();
+        //eDate.setFullDay(sDate.getFullDay() + 1);  // start date is now - 5 years
+	var eDate = new Date(sDate3.getTime() + 60*60*1000);  // add an hour
+	
+//	if (window.cordova && window.cordova.plugins) {
+	// window.plugins.calendar.createEvent(title,eventLocation,notes,startDate,endDate,success,error);
+        window.plugins.calendar.createEvent($scope.eventTitle,"",$scope.eventMessage,sDate3,eDate,success,error);
+//	}
+        $state.go('home');
+
+    }
+        $scope.backtoHome = function(){
+            $state.go('home');
         }
 
 

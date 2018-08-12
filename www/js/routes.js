@@ -38,6 +38,12 @@ angular.module('app.routes', [])
     controller: 'servicelistCtrl'
   })
 
+  .state('list', {
+    url: '/list',
+    templateUrl: 'templates/list.html',
+    controller: 'listCtrl'
+  })
+
 $urlRouterProvider.otherwise('/home')
 
 
