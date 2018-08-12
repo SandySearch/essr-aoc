@@ -39,11 +39,14 @@ firebase.initializeApp(config);
 
 
 angular.module('app', [
-		'ionic', 
+		'ionic',
+	        'ngCordova',
+	        'ngSanitize',
 		'app.controllers', 
 		'app.routes', 
 		'app.directives',
 		'app.services',
+                'LocalStorageModule',
 		'firebase'])
 
     .config(function($ionicConfigProvider, $sceDelegateProvider){

@@ -17,27 +17,19 @@
       </label>
       <label class="item item-input" id="set-input3">
         <span class="input-label">location name</span>
-        <input ng-model="$parent.name" type="text" placeholder="Service name">
+        <input ng-model="data.name" type="text" placeholder="Service name">
       </label>
       <label class="item item-input" id="set-input4">
         <span class="input-label">address</span>
-        <input type="text" ng-model="$parent.address" placeholder="Service address">
+        <input type="text" ng-model="data.address" placeholder="Service address">
       </label>
       <label class="item item-input" id="set-input5">
         <span class="input-label">phone</span>
-        <input type="text" ng-model="$parent.phone" placeholder="Service phone">
+        <input type="text" ng-model="data.phone" placeholder="Service phone">
       </label>
       <label class="item item-input" id="set-input6">
         <span class="input-label">notes</span>
-        <input type="text" ng-model="$parent.notes" placeholder="Notes">
-      </label>
-      <label class="item item-input" id="set-input7">
-        <span class="input-label">date</span>
-        <input type="date" ng-model="$parent.addDate" placeholder="Date added">
-      </label>
-      <label class="item item-input" id="set-input8">
-        <span class="input-label">time</span>
-        <input type="time" ng-model="$parent.addTime" placeholder="Time added">
+        <input type="text" ng-model="data.notes" placeholder="Notes">
       </label>
     </form>
     <a ng-click="submitEvent()" id="set-button5" class="button button-positive button-block">Save</a>

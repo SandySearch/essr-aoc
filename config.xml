@@ -84,5 +84,6 @@
     <plugin name="cordova-plugin-calendar" spec="^5.0.0" />
     <allow-navigation href="http://192.168.100.4:8100" />
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^1.5.0" />
     <engine name="android" spec="^7.1.1" />
 </widget>
