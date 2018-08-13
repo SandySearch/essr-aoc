@@ -1,16 +1,65 @@
 # essr-aoc
-Emergency Services Search and Report for the Agents of Change Hackathon, 11 &amp; 12 August 2018 in NYC
 
-## Idea
+## Emergency Services - Search and Reporting Mobile and Web App
 
-I was in Super Storm Sandy in Connecticut was was without power for 9 days.
-During the disaster, we had a very hard time discovering what services were available and when and where.
+===
 
-The idea for this service is to use the power of crowdsourcing (think "Waze for Services, after a disaster").  It currently allows anyone (without a login) to search and report on services available.
+[![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](https://github.com/mkobar/essr-aoc/blob/master/LICENSE)
+![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg)
+![Platform](https://img.shields.io/badge/platform-iOS-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Web-orange.svg)
+
+Entry for The Agents of Change Hackathon, 12 August 2018 in NYC
+
+<img align="right" height="200" src="https://raw.githubusercontent.com/mkobar/essr-aoc/master/resources/logo.png">
+
+text
+
+text
+
+text
+
+text
+
+text
+
+text
+
+text
+
+
+
+
+### The Idea
+
+I was in Super Storm Sandy in 2012 in Connecticut, and was without power for 9 days.
+During the disaster, we had a very hard time discovering what services (gasoline, food, water, ice, power) were available and when and where.  And if you have only a half a tank of gas you don't want to drive around looking for more, without knowing where to go.
+
+The idea for this service is to use the power of crowdsourcing (think "Waze for Services, after a disaster").  It currently allows anyone (without a login) to search and report on services available in their area.
 
 Verified users (pre-registered, think Red Cross, National Guard, and business owners/managers) can leave "verified" status updates, at no cost.
 
-I think the service could be used as a branding expense to get good press and more prospective customers.  The majority of the expense would be the manual verification of "verified" users.
+I think the service could be used as a branding expense to get good press and more prospective customers.  The majority of the expense would be the manual verification of "verified" users, and minimal hosting of the back-end service.
+
+<img align="left" height="200" src="https://raw.githubusercontent.com/mkobar/essr-aoc/master/resources/Sandy_Oct_28_2012_1600Z.jpg">
+
+### How It Works
+So this service uses geolocation and the standard crowdsourcing format to collect information from people in the field.
+And share it with anyone who needs it.
+
+Nothing fancy but it could work, much like the way Zello was used after Hurricane Harvey in Houston:  https://wgntv.com/2017/08/29/civilians-and-cajun-navy-bring-their-own-boats-to-rescue-harvey-victims/
+
+### How It Was Built
+This mobile application was built with the sweet [Ionic Framework](http://ionicframework.com/) (Angular.js/JavaScript/CSS/HTML5) and uses the Google [FireBase](https://www.firebase.com/) service for authentication and cloud data storage.
+
+### Live Demos
+
+Live web app version of SNB can be found here:  https://esrr-aoc.firebaseapp.com/#/home
+
+And the Android APK is available on GitHub here:
+  https://github.com/mkobar/essr-aoc/releases/tag/0.0.1
+
+The GitHub repository for the web app is here: https://github.com/mkobar/essr-aot
 
 ## Things left to do:
 
@@ -20,12 +69,10 @@ I think the service could be used as a branding expense to get good press and mo
 - add a map view (with Google Maps or OpenStreetMaps)
 - add the account request function (and screen) - something like Goole Forms would work well.
 
-## Demos
+## License
 
-The code is currently hosted on Firebase as a demo at:
-   https://esrr-aoc.firebaseapp.com/#/home 
+Released under the [MIT License](http://opensource.org/licenses/MIT)
 
-And the APK is available on GitHub here:
-  https://github.com/mkobar/essr-aoc/releases/tag/0.0.1
+Copyright @ 2018 [RKOSecurity](http://www.rkosecurity.com)
 
 
