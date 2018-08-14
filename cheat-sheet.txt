@@ -1,0 +1,10 @@
+npm i
+bower install
+
+ionic serve -c -s --lab
+
+ionic platform add android@7.1.1
+ionic resources
+ionic run android --device
+ionic build android
+
