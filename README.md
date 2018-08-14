@@ -2,8 +2,6 @@
 
 ## Emergency Services - Search and Reporting Mobile and Web App
 
-===
-
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](https://github.com/mkobar/essr-aoc/blob/master/LICENSE)
 ![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-iOS-blue.svg)
@@ -27,7 +25,7 @@ I think the service could be used as a branding expense to get good press and mo
 <img align="left" height="400" src="https://raw.githubusercontent.com/mkobar/essr-aoc/master/resources/Sandy_Oct_28_2012_1600Z.jpg">
 
 ### How It Works
-So this service uses geolocation and the standard crowdsourcing format to collect information from people in the field.
+So this service uses geolocation and a standard crowdsourcing format to collect information from people in the field.
 And share it with anyone who needs it.
 
 Nothing fancy but it could work, much like the way Zello was used after Hurricane Harvey in Houston:  https://wgntv.com/2017/08/29/civilians-and-cajun-navy-bring-their-own-boats-to-rescue-harvey-victims/
