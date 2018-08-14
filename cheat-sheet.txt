@@ -1,10 +1,33 @@
+ionic v1 build cheat sheet
+--------------------------
+
+# install
+npm i ionic@3.20.0 cordova@8.0.0
 npm i
 bower install
 
+# browser test
 ionic serve -c -s --lab
 
+# Android build
 ionic platform add android@7.1.1
 ionic resources
+
+# Android test and build
 ionic run android --device
 ionic build android
+
+# Firebase hosting
+
+npm i -g firebase-tools
+firebase login
+firebase init
+firebase serve
+
+use localhost:5000 to test
+
+firebase deploy
+
+use https://esrr-aoc.firebaseapp.com to test
+
 
