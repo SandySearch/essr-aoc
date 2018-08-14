@@ -25,12 +25,14 @@ I think the service could be used as a branding expense to get good press and mo
 <img align="left" height="400" src="https://raw.githubusercontent.com/mkobar/essr-aoc/master/resources/Sandy_Oct_28_2012_1600Z.jpg">
 
 ### How It Works
+
 So this service uses geolocation and a standard crowdsourcing format to collect information from people in the field.
 And share it with anyone who needs it.
 
 Nothing fancy but it could work, much like the way Zello was used after Hurricane Harvey in Houston:  https://wgntv.com/2017/08/29/civilians-and-cajun-navy-bring-their-own-boats-to-rescue-harvey-victims/
 
 ### How It Was Built
+
 This mobile application was built with the sweet [Ionic Framework](http://ionicframework.com/) (Angular.js/JavaScript/CSS/HTML5) and uses the Google [FireBase](https://www.firebase.com/) service for authentication and cloud data storage.
 
 With a Vim editor and a cmd window.
@@ -50,7 +52,7 @@ The GitHub repository for the web app is here: https://github.com/mkobar/essr-ao
 - complete the backend debugging with Google Firebase (currently on a free spark plan).
 - add in the real distance calculations (from stree address).  There are seveal free services for this but they may be rate limited.
 - add a map view (with Google Maps or OpenStreetMaps)
-- add the account request function (and screen) - something like Goole Forms would work well.
+- add the account request function (and screen) - something like Google Forms would work well.
 
 Please do contact me directly if you can use or add to this project.
 
