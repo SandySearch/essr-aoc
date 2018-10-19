@@ -1,5 +1,7 @@
 # essr-aoc
 
+NOTE:  THis project has been **Depreciated** and has been replaced by [SandySearch](https://devpost.com/software/sandy-search)
+
 ## Emergency Services - Search and Reporting Mobile and Web App
 
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](https://github.com/mkobar/essr-aoc/blob/master/LICENSE)
