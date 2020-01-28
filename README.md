@@ -41,12 +41,12 @@ With a Vim editor and a cmd window.
 
 ### Live Demos
 
-Live web app version of SNB can be found here:  https://esrr-aoc.firebaseapp.com/#/home
+Live web app version of ESSR can be found here:  https://esrr-aoc.firebaseapp.com/#/home
 
 And the Android APK is available on GitHub here:
   https://github.com/mkobar/essr-aoc/releases/tag/0.0.1
 
-The GitHub repository for the web app is here: https://github.com/mkobar/essr-aot
+The GitHub repository for the web app is here: https://github.com/mkobar/essr-aoc
 
 ## Things left to do:
 
@@ -62,6 +62,6 @@ Please do contact me directly if you can use or add to this project.
 
 Released under the [MIT License](http://opensource.org/licenses/MIT)
 
-Copyright @ 2018 [RKOSecurity](http://www.rkosecurity.com)
+Copyright @ 2018-2020 [RKOSecurity](http://www.rkosecurity.com)
 
 
