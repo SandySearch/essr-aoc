@@ -11,7 +11,7 @@ NOTE:  THis project has been **Depreciated** and has been replaced by [SandySear
 
 Entry for The Agents of Change Hackathon, 12 August 2018 in NYC
 
-<img align="right" height="200" src="https://raw.githubusercontent.com/mkobar/essr-aoc/master/resources/logo.png">
+<img align="right" height="200" src="https://raw.githubusercontent.com/sandysearch/essr-aoc/master/resources/logo.png">
 
 ### The Idea
 
@@ -24,7 +24,7 @@ Verified users (pre-registered, think Red Cross, National Guard, and business ow
 
 I think the service could be used as a branding expense to get good press and more prospective customers.  The majority of the expense would be the manual verification of "verified" users, and minimal hosting of the back-end service.
 
-<img align="left" height="400" src="https://raw.githubusercontent.com/mkobar/essr-aoc/master/resources/Sandy_Oct_28_2012_1600Z.jpg">
+<img align="left" height="400" src="https://raw.githubusercontent.com/sandysearch/essr-aoc/master/resources/Sandy_Oct_28_2012_1600Z.jpg">
 
 ### How It Works
 
@@ -44,9 +44,9 @@ With a Vim editor and a cmd window.
 Live web app version of ESSR can be found here:  https://esrr-aoc.firebaseapp.com/#/home
 
 And the Android APK is available on GitHub here:
-  https://github.com/mkobar/essr-aoc/releases/tag/0.0.1
+  https://github.com/sandysearch/essr-aoc/releases/tag/0.0.1
 
-The GitHub repository for the web app is here: https://github.com/mkobar/essr-aoc
+The GitHub repository for the web app is here: https://github.com/sandysearch/essr-aoc
 
 ## Things left to do:
 
